@@ -1,4 +1,9 @@
-const { xmasTree, findLineWidth, makeTreeTrunk } = require("./xmas-tree");
+const {
+  xmasTree,
+  findLineWidth,
+  makeFoliageLevel,
+  makeTreeTrunk,
+} = require("./xmas-tree");
 
 test("xmasTree returns an array modelling a Christmas tree of given foliage height", () => {
   expect(xmasTree(5)).toEqual([
