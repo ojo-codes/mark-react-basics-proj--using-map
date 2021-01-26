@@ -1,4 +1,4 @@
-import { xmasTree, findLineWidth, makeTreeTrunk } from "./xmas-tree";
+const { xmasTree, findLineWidth, makeTreeTrunk } = require("./xmas-tree");
 
 test("xmasTree returns an array modelling a Christmas tree of given height", () => {
   expect(xmasTree(5)).toEqual(["____#____", "____#____"]);
