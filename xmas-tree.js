@@ -11,7 +11,13 @@ function makeFoliageLevel(foliageHeight, foliageLevel) {
   return `${halfTrunkPadding}${foliage}${halfTrunkPadding}`;
 }
 
-function makeTreeFoliage() {}
+function makeTreeFoliage(foliageHeight) {
+  const foliage = [];
+  for (let foliageLevel = 1; foliageLevel <= foliageHeight; foliageLevel++) {
+    foliage.push(makeFoliageLevel(foliageHeight, foliageLevel));
+  }
+  return foliage;
+}
 
 function makeTreeTrunk(foliageHeight) {
   const halfTrunkWidth = foliageHeight - 1;
