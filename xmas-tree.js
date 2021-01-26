@@ -1,4 +1,6 @@
-function xmasTree(foliageHeight) {}
+function xmasTree(foliageHeight) {
+  return [...makeTreeFoliage(foliageHeight), ...makeTreeTrunk(foliageHeight)];
+}
 
 function findLineWidth(foliageHeight) {
   return 2 * foliageHeight - 1;
