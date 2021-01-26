@@ -11,6 +11,8 @@ function makeFoliageLevel(foliageHeight, foliageLevel) {
   return `${halfTrunkPadding}${foliage}${halfTrunkPadding}`;
 }
 
+function makeTreeFoliage() {}
+
 function makeTreeTrunk(foliageHeight) {
   const halfTrunkWidth = foliageHeight - 1;
   const halfTrunkPadding = "_".repeat(halfTrunkWidth);
@@ -19,4 +21,10 @@ function makeTreeTrunk(foliageHeight) {
 }
 
 // exports the functions so that ./xmas-tree.test.js can import them
-module.exports = { xmasTree, findLineWidth, makeFoliageLevel, makeTreeTrunk };
+module.exports = {
+  xmasTree,
+  findLineWidth,
+  makeFoliageLevel,
+  makeTreeFoliage,
+  makeTreeTrunk,
+};

@@ -2,6 +2,7 @@ const {
   xmasTree,
   findLineWidth,
   makeFoliageLevel,
+  makeTreeFoliage,
   makeTreeTrunk,
 } = require("./xmas-tree");
 
@@ -28,6 +29,17 @@ test("makeFoliageLevel returns the foliage for a given level of a tree of given 
   expect(makeFoliageLevel(5, 4)).toBe("_#######_");
   expect(makeFoliageLevel(3, 1)).toBe("__#__");
   expect(makeFoliageLevel(3, 2)).toBe("_###_");
+});
+
+test("makeTreeFoliage returns the foliage for a tree of given foliage height", () => {
+  expect(makeTreeFoliage(5)).toEqual([
+    "____#____",
+    "___###___",
+    "__#####__",
+    "_#######_",
+    "#########",
+  ]);
+  expect(makeTreeFoliage(3)).toEqual(["__#__", "_###_", "#####"]);
 });
 
 test("makeTreeTrunk returns the tree trunk part of the Christmas tree with given foliage height", () => {
