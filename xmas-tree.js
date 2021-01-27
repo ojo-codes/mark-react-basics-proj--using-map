@@ -22,7 +22,8 @@ function makeTreeFoliage(foliageHeight) {
 }
 
 function makeTreeTrunk(foliageHeight) {
-  const halfTrunkWidth = foliageHeight - 1;
+  const lineWidth = findLineWidth(foliageHeight);
+  const halfTrunkWidth = (lineWidth - 1) / 2;
   const halfTrunkPadding = "_".repeat(halfTrunkWidth);
   const oneTrunkRung = `${halfTrunkPadding}#${halfTrunkPadding}`;
   return [oneTrunkRung, oneTrunkRung];
