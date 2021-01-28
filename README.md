@@ -18,11 +18,7 @@ tags:
 
 > This is part of Academy's [technical curriculum for **The Mark**](https://github.com/WeAreAcademy/curriculum-mark). All parts of that curriculum, including this project, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-You have learned how to read, extend and write code for a **JavaScript CLI game**. This means that you can also learn how to build a CLI in ***Type*Script**!
-
-In this challenge, you will work out how an existing CLI game in TypeScript works, using the same ideas which you've been applying in Python and JavaScript: _variables_, _control flow_ and _functions_.
-
-There are a couple of additional things that TypeScript adds to JavaScript (e.g. `interface`s and `type`s).
+This project is all about setting up your machine for JavaScript programmes.
 
 ## Learning Outcomes
 
@@ -60,16 +56,13 @@ and now note a few files:
 
 `package.json` is a file which sits in the root folder of most JavaScript/TypeScript projects.
 
-Ours has the following fields:
+It has different fields - which you can [read about in more detail in the `npm` docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json) - but two will be of particular interest to us in this project: `scripts` and `dependencies`.
 
-| Field name | Purpose | Required? |
-| --- | --- | --- |
-| `name` | The project name | Yes |
-| `version` | The version of the project, followinsg [semantic versioning guidelines](https://docs.npmjs.com/about-semantic-versioning) | Yes |
-| `scripts` | We'll come back to this later! |  |
-| `license` | The s |
+We'll come back to `scripts` later in this project. For now, if you look at `dependencies`, you will see that there is one direct _dependency_ listed: `jest`, a [JavaScript testing library](https://jestjs.io/).
 
-There are lots more fields which you can [read about in more detail in the `npm` docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json).
+(The `"^26.6.3"` tells us about which versions of Jest are consistent with the project. Don't worry too much about that right now.)
+
+> ⚠️ Normally, we would see `jest` under `devDependencies`, but we'll learn about why in another project.
 
 ### Install dependencies
 
