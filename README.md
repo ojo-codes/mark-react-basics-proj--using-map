@@ -40,10 +40,44 @@ This repository contains a JavaScript project written following TDD principles.
 
 To start with, we'll clone the repository and run the existing tests to check the existing state of the code.
 
-### Clone the repository
+### Clone and inspect the repository
+
+Let's clone the repository:
 
 ```bash
+cd ~/Developer/Academy # or wherever you're storing Academy repos
 git clone https://github.com/WeAreAcademy/mark-fundamentals-proj--js-xmas-tree.git
+```
+
+and now note a few files:
+
+- `yarn.lock` - let's ignore this for now
+- `xmas-tree.js` - this has our main code
+- `xmas-tree.spec.js` - this has our tests
+- `package.json` - let's look at this now!
+
+### Reading `package.json`
+
+`package.json` is a file which sits in the root folder of most JavaScript/TypeScript projects.
+
+Ours has the following fields:
+
+| Field name | Purpose | Required? |
+| --- | --- | --- |
+| `name` | The project name | Yes |
+| `version` | The version of the project, followinsg [semantic versioning guidelines](https://docs.npmjs.com/about-semantic-versioning) | Yes |
+| `scripts` | We'll come back to this later! |  |
+| `license` | The s |
+
+There are lots more fields which you can [read about in more detail in the `npm` docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json).
+
+### Install dependencies
+
+What we've cloned is an `npm` project that has some dependencies.
+
+```bash
+cd mark-fundamentals-proj--js-xmas-tree
+yarn
 ```
 
 ## Exercise 1: Installing and demoing
