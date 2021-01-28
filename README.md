@@ -40,6 +40,12 @@ This repository contains a JavaScript project written following TDD principles.
 
 To start with, we'll clone the repository and run the existing tests to check the existing state of the code.
 
+### Clone the repository
+
+```bash
+git clone https://github.com/WeAreAcademy/mark-fundamentals-proj--js-xmas-tree.git
+```
+
 ## Exercise 1: Installing and demoing
 
 **Success criterion:** playing a few games of Hangman on your local machine by running the TypeScript programme written.
