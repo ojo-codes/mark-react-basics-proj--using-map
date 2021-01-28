@@ -30,6 +30,10 @@ There are a couple of additional things that TypeScript adds to JavaScript (e.g.
 - Run a script with `yarn`
 - Write tests in JavaScript with Jest
 
+## Exercise 0: Installing and running your first JavaScript project
+
+This repository contains a JavaScript project written following TDD principles.
+
 ## Exercise 1: Installing and demoing
 
 **Success criterion:** playing a few games of Hangman on your local machine by running the TypeScript programme written.
