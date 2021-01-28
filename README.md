@@ -30,9 +30,15 @@ There are a couple of additional things that TypeScript adds to JavaScript (e.g.
 - Run a script with `yarn`
 - Write tests in JavaScript with Jest
 
+## Prerequisite: `nvm` and `yarn`
+
+TODO
+
 ## Exercise 0: Installing and running your first JavaScript project
 
 This repository contains a JavaScript project written following TDD principles.
+
+To start with, we'll clone the repository and run the existing tests to check the existing state of the code.
 
 ## Exercise 1: Installing and demoing
 
