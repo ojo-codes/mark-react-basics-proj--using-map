@@ -26,13 +26,9 @@ There are a couple of additional things that TypeScript adds to JavaScript (e.g.
 
 ## Learning Outcomes
 
-- Interpret code written by others
-- Use variable declaration and assignment in TypeScript
-- Use control flow in TypeScript
-- Use functions and arguments in TypeScript
-- Use search engines as a learning and knowledge aid
-- Add code to a codebase written by others
-- Constrain variables and arguments in TypeScript
+- Install `npm` dependencies with `yarn`
+- Run a script with `yarn`
+- Write tests in JavaScript with Jest
 
 ## Exercise 1: Installing and demoing
 
