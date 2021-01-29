@@ -38,7 +38,25 @@ Node.js comes in different versions - so we'll use something called Node Version
 
 [Here's the `nvm` documentation](https://github.com/nvm-sh/nvm). It has instructions on installation, verifying installation and troubleshooting common problems.
 
-Once you've installed `nvm` (and verified its installation), follow the `nvm` docs on installing the latest version of Node.js.s
+Once you've installed `nvm` (and verified its installation), follow the `nvm` docs on installing the latest version of Node.js.
+
+### Running JavaScript in the terminal
+
+Now that we've got `node` installed, we can open up an interactive JavaScript console in our terminal simply with:
+
+```bash
+node
+```
+
+Here are some of the things you could try in the JavaScript shell:
+
+- `2 + 2`
+- `"Hello, world!"`
+- `["Roses are red", "Violets are blue", "Python is fun", "JS is too!"]`
+
+Feel free to experiment!
+
+Once you are satisfied, you can exit the JavaScript console and return to your normal shell with `Ctrl + C`.
 
 ## Exercise 0: Installing and running your first JavaScript project
 
