@@ -18,7 +18,7 @@ tags:
 
 > This is part of Academy's [technical curriculum for **The Mark**](https://github.com/WeAreAcademy/curriculum-mark). All parts of that curriculum, including this project, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-This project is all about setting up your machine for JavaScript programmes.
+This project is all about setting up your machine for JavaScript programmes, using a previously referenced [Xmas Tree](https://www.codewars.com/kata/577c349edf78c178a1000108) kata as inspiration.
 
 ## Learning Outcomes
 
@@ -173,46 +173,68 @@ We won't often be adding to our `scripts`, but it's helpful to understand what's
 
 Finally, let's revert to `"test": "jest"` as we had before, and confirm that this work with another `yarn test`.
 
-## Exercise 1: Installing and demoing
+## Exercise 1: Reading, understanding and documenting
 
-**Success criterion:** playing a few games of Hangman on your local machine by running the TypeScript programme written.
-
-Firstly, clone this repository to your local machine in some sensible place, for example:
-
-```bash
-cd ~/Development/Academy # or wherever you're organising everything
-git clone https://github.com/WeAreAcademy/mark-fundamentals-proj--ts-hangman.git
-```
-
-Then, change into the new directory and install the files:
-
-```bash
-cd mark-fundamentals-proj--ts-hangman
-yarn
-```
-
-Finally, run the programme!
-
-```bash
-yarn start
-```
-
-## Exercise 2: Reading, understanding and documenting
-
-> 🎯 **Success criterion:** a document which outlines how you think this TypeScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
+**Success criterion:** a document which outlines how you think this JavaScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
 
 (N.B.: The _correctness_ of your theory is **much less important** than the _process_ of forming this document. [Forming a prediction, and then discovering it was wrong, is an effective way to learn](https://www.sciencedirect.com/science/article/abs/pii/S0959475217303468)!)
 
-Steps that we have previously suggested as a learning exercise (and suggest again) include:
+We think that you will be able to work out lots about JavaScript just by bringing in your existing ideas from Python, although you might want to look at some of the following readings for specific things:
 
-1. Take some time to read and digest the code
-2. Google things that you don't understand
-3. Experiment with changing things
-4. Produce a narrative document
+- [JavaScript variables](https://javascript.info/variables)
+- [JavaScript `for` loops](https://www.programiz.com/javascript/for-loop)
 
-A good narrative document for this game would walk through at least one game of Hangman and explain how the programme code is leading to the terminal output. (Screenshots of the terminal and/or snippets of programme code are likely to be helpful here.)
+As a _learning exercise_ in reading and thinking about code, here are some steps that we _suggest_ (not as a strict sequential ordering):
 
-## Exercise 3: TypeScript-specific notes
+### a) Take some time to read and digest the code.
+
+Focus on forming a theory about how the programme is meant to work, through the lens of _ideas_ rather than the _syntax_.
+
+You won't understand everything straight away. That's okay! It is a different syntax to Python. However, the _ideas_ are very similar.
+
+### b) Add comments for the parts you understand.
+
+At this point in time, you're trying to make sense of the code, and hold a lot of things together in your head.
+
+It will help your learning to take some of those things out of your head and put them down in writing, so we suggest that you begin documenting your understanding of the code by adding comments that explain what is happening.
+
+For example, here is how you might try to document your understanding of a line of code within a function:
+
+```js
+function printGreeting(name) {
+  /**
+   * I think console.log is printing
+   *  out the message we pass to it.
+   *  This message comes from joining
+   *  together three parts into a single
+   *  combined message.
+   */
+  console.log("Hi there, " + name + "!");
+}
+```
+
+... but you have the freedom to document in whatever way seems helpful or sensible to you.
+
+(Unsure of the syntax for adding comments in JavaScript? Google it!)
+
+_(N.B. This documenting exercise is suggested as a learning tool rather than a production codebase best practice.)_
+
+### c) Google things you don't understand.
+
+We expect that there are things in the code which you won't immediately fathom (e.g. `Object.values).
+
+Google them and see if you can make sense of them!
+
+### d) Experiment with changing things.
+
+A great way to test your understanding of things is to experiment, change things, and see what breaks.
+
+Things you might try doing:
+
+- You have a theory about a variable - try doing a `console.log` of it to get some _visibility_ on its value
+- You have a theory about the flow of a function - try moving things around inside it and see whether it breaks as you expect
+
+## Exercise 2: JavaScript-specific notes
 
 > 🎯 **Success criterion:** a document which outlines how this Hangman game uses some TypeScript features that don't exist in JavaScript.
 
