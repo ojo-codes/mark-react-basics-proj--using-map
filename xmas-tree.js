@@ -1,5 +1,7 @@
 function xmasTree(foliageHeight) {
-  return [...makeTreeFoliage(foliageHeight), ...makeTreeTrunk(foliageHeight)];
+  const foliage = makeTreeFoliage(foliageHeight);
+  const trunk = makeTreeTrunk(foliageHeight);
+  return foliage.concat(trunk);
 }
 
 function findLineWidth(foliageHeight) {
