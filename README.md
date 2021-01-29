@@ -26,7 +26,9 @@ This project is all about setting up your machine for JavaScript programmes.
 - Run a script with `yarn`
 - Write tests in JavaScript with Jest
 
-## Exercise -1: Preparing to run JavaScript and install project dependencies
+## Exercise -1: Preparing to run JavaScript projects on your machine
+
+> 🎯 **Success criterion:** you can verify that you have `nvm` and `yarn` installed, and you can open up a JavaScript console in the terminal with `node`
 
 ### Installing `node` via `nvm`
 
@@ -58,7 +60,22 @@ Feel free to experiment!
 
 Once you are satisfied, you can exit the JavaScript console and return to your normal shell with `Ctrl + C`.
 
+### Installing `yarn`
+
+The JavaScript ecosystem has lots of pre-written 'libraries' of code that we can plug into, like [React](https://reactjs.org/) (which we'll use in a later week).
+
+We'll need a way to grab the code of these libraries (or 'install' them).
+
+There are two common 'package managers' used in the JavaScript ecosystem:
+
+- `npm`, automatically bundled with `node`;
+- `yarn`, an alternative to `npm` [built and open-sourced by Facebook](https://engineering.fb.com/2016/10/11/web/yarn-a-new-package-manager-for-javascript/)
+
+All our examples will use `yarn` commands (on the basis that the commands are slightly more concise and [it benchmarks slightly better in speed](https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet)), but there are [equivalent `npm` commands](https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet) for everything.
+
 ## Exercise 0: Installing and running your first JavaScript project
+
+> 🎯 **Success criterion:** a document which outlines how you think this TypeScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
 
 This repository contains a JavaScript project written following TDD principles.
 
