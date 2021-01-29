@@ -26,9 +26,19 @@ This project is all about setting up your machine for JavaScript programmes.
 - Run a script with `yarn`
 - Write tests in JavaScript with Jest
 
-## Prerequisite: `nvm` and `yarn`
+## Exercise -1: Preparing to run JavaScript and install project dependencies
 
-TODO
+### Installing `node` via `nvm`
+
+JavaScript [originated as a browser-based language](https://www.springboard.com/blog/history-of-javascript), but it can also now be run outside browsers as a backend (server-side) language, most popularly through the [Node.js](https://nodejs.dev/learn/a-brief-history-of-nodejs) environment.
+
+Whilst we could run JavaScript just in the browser, in order to explore the full power of modern JavaScript (and, soon, TypeScript) we'll be using Node.js to run JavaScript e.g. through our terminals.
+
+Node.js comes in different versions - so we'll use something called Node Version Manager (or `nvm`), because this will make it easier for us to sswitch between Node.js versions if we want to later.
+
+[Here's the `nvm` documentation](https://github.com/nvm-sh/nvm). It has instructions on installation, verifying installation and troubleshooting common problems.
+
+Once you've installed `nvm` (and verified its installation), follow the `nvm` docs on installing the latest version of Node.js.s
 
 ## Exercise 0: Installing and running your first JavaScript project
 
@@ -63,15 +73,6 @@ We'll come back to `scripts` later in this project. For now, if you look at `dep
 (The `"^26.6.3"` tells us about which versions of Jest are consistent with the project. Don't worry too much about that right now.)
 
 > ⚠️ Normally, we would see `jest` under `devDependencies`, but we'll learn about why in another project.
-
-### Install dependencies
-
-What we've cloned is an `npm` project that has some dependencies.
-
-```bash
-cd mark-fundamentals-proj--js-xmas-tree
-yarn
-```
 
 ## Exercise 1: Installing and demoing
 
