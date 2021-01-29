@@ -107,7 +107,7 @@ and now note a few files:
 
 It has different fields - which you can [read about in more detail in the `npm` docs](https://docs.npmjs.com/cli/v6/configuring-npm/package-json) - but two will be of particular interest to us in this project: `scripts` and `dependencies`.
 
-We'll come back to `scripts` later in this project. For now, if you look at `dependencies`, you will see that there is one direct _dependency_ listed: `jest`, a [JavaScript testing library](https://jestjs.io/).
+We'll come back to `scripts` later in this project. For now, if you look at `dependencies`, you will see that there is one direct _dependency_ listed: `jest`, a [JavaScript testing library](https://jestjs.io/) (which, as it happens, has also been open-sourced by Facebook).
 
 (The `"^26.6.3"` tells us about which versions of Jest are consistent with the project. Don't worry too much about that right now.)
 
@@ -157,7 +157,21 @@ Now that you have installed the dependencies, you'll be able to run the followin
 yarn test
 ```
 
-<!-- N.B. Exercise still under construction -->
+You'll see `jest` pop up in the terminal, followed by the test output. Congratulations, you've run your first JavaScript tests!
+
+### Returning to `scripts` in `package.json`
+
+The reason why `jest` pops up goes back to our `scripts` in `package.json` - you'll see that we have a script called `test` which is set to `"jest"`.
+
+Try replacing `"jest"` with `"pwd"`, then execute `yarn test` again. You'll see that it prints your working directory.
+
+Now, try replacing `"test"` with `"pick-avocados"` (a deliberately silly name chosen for demonstration purposes).
+
+When you try to run `yarn test`, you'll see that it'll tell you that it can't find the command - but `yarn pick-avocados` will execute the `pwd` command and print your working directory.
+
+We won't often be adding to our `scripts`, but it's helpful to understand what's going on when we run a command like `yarn test` - it's all specified for us in our `package.json`.
+
+Finally, let's revert to `"test": "jest"` as we had before, and confirm that this work with another `yarn test`.
 
 ## Exercise 1: Installing and demoing
 
