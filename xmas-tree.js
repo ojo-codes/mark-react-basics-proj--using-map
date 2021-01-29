@@ -1,4 +1,5 @@
 function xmasTree(foliageHeight) {
+  // Array destructuring would be preferred for brevity, but an array concatenation has been chosen for accessibility
   const foliage = makeTreeFoliage(foliageHeight);
   const trunk = makeTreeTrunk(foliageHeight);
   return foliage.concat(trunk);
