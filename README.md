@@ -73,9 +73,13 @@ There are two common 'package managers' used in the JavaScript ecosystem:
 
 All our examples will use `yarn` commands (on the basis that the commands are slightly more concise and [it benchmarks slightly better in speed](https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet)), but there are [equivalent `npm` commands](https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet) for everything.
 
+Because `yarn` isn't bundled with `node` by default, we'll have to install it... ironically, therefore, we'll be installing it using `npm`!
+
+Look at [the Yarn docs on installation here](https://classic.yarnpkg.com/en/docs/install/), and follow the docs to verify that you have successfully installed it.
+
 ## Exercise 0: Installing and running your first JavaScript project
 
-> 🎯 **Success criterion:** a document which outlines how you think this TypeScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
+> 🎯 **Success criterion:** you are able to run the tests for this project locally and see the output in your terminal (hopefully all passing tests!).
 
 This repository contains a JavaScript project written following TDD principles.
 
@@ -108,6 +112,14 @@ We'll come back to `scripts` later in this project. For now, if you look at `dep
 (The `"^26.6.3"` tells us about which versions of Jest are consistent with the project. Don't worry too much about that right now.)
 
 > ⚠️ Normally, we would see `jest` under `devDependencies`, but we'll learn about why in another project.
+
+### Installing and inspecting the dependencies
+
+To install all dependencies required for the project, ensure that you are in the same directory as the project's `package.json`, and run the following command.
+
+```bash
+yarn # this is equivalent to npm install
+```
 
 ## Exercise 1: Installing and demoing
 
