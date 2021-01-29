@@ -113,13 +113,51 @@ We'll come back to `scripts` later in this project. For now, if you look at `dep
 
 > ⚠️ Normally, we would see `jest` under `devDependencies`, but we'll learn about why in another project.
 
-### Installing and inspecting the dependencies
+### Installing the dependencies
 
 To install all dependencies required for the project, ensure that you are in the same directory as the project's `package.json`, and run the following command.
 
 ```bash
 yarn # this is equivalent to npm install
 ```
+
+After this finishes running, you will see a `node_modules` folder appear as a subdirectory... _and it's pretty big_.
+
+It has a bunch of its own subdirectories, including:
+
+- `import-local`
+- `pkg-dir`
+- `find-up`
+
+Where did they all come from? What does it mean?
+
+### Tracing the dependency tree
+
+`node_modules` holds all the code of libraries that we need for this JavaScript project (outside of the code which we write ourselves).
+
+This includes both _direct dependencies_ and _indirect dependencies_.
+
+If you scour the `node_modules` folder, you'll see a `jest` folder - let's take a look at that.
+
+The `node_modules/jest` folder has its _own_ `package.json`. It has more fields than what is in our project's root `package.json`, but some shared ones - in particular, _`jest` has its own dependencies_:
+
+- `@jest/core`
+- `import-local`
+- `jest-cli`
+
+These aren't direct dependencies of our root project - but, as dependencies of a direct dependency (`jest`), they are _indirect_ dependencies.
+
+This means that you will be able to find another folder, `node_modules/import-local` - which, again, has its own `package.json`, and its own dependencies, e.g. `pkg-dir`, which has its own dependencies...
+
+It's by tracing out this dependency tree that we end up with the huge massive `node_modules` folder. (This is a bit of a meme in JavaScript-land - you can use your favourite search engine and look at "node modules meme"...)
+
+Now that you have installed the dependencies, you'll be able to run the following command to execute the project tests:
+
+```bash
+yarn test
+```
+
+<!-- N.B. Exercise still under construction -->
 
 ## Exercise 1: Installing and demoing
 
