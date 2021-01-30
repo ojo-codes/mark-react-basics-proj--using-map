@@ -36,11 +36,11 @@ JavaScript [originated as a browser-based language](https://www.springboard.com/
 
 Whilst we could run JavaScript just in the browser, in order to explore the full power of modern JavaScript (and, soon, TypeScript) we'll be using Node.js to run JavaScript e.g. through our terminals.
 
-Node.js comes in different versions - so we'll use something called Node Version Manager (or `nvm`), because this will make it easier for us to sswitch between Node.js versions if we want to later.
+Node.js comes in different versions - so we'll use something called Node Version Manager (or `nvm`), because this will make it easier for us to switch between Node.js versions if we want to later.
 
-[Here's the `nvm` documentation](https://github.com/nvm-sh/nvm). It has instructions on installation, verifying installation and troubleshooting common problems.
+[Here's the `nvm` documentation](https://github.com/nvm-sh/nvm). It has instructions on installation, verifying installation and troubleshooting common problems. Note: you may need to restart your terminal in order to use `nvm` / verify that it is installed.
 
-Once you've installed `nvm` (and verified its installation), follow the `nvm` docs on installing the latest version of Node.js.
+Once you've installed `nvm` (and verified its installation), [follow the `nvm` docs on installing the latest version of Node.js](https://github.com/nvm-sh/nvm#usage).
 
 ### Running JavaScript in the terminal
 
