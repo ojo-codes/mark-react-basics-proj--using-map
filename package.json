@@ -1,5 +1,5 @@
 {
-  "name": "mark-fundamentals-proj--js-xmas-tree",
+  "name": "mark-fundamentals-proj--js-fizzbuzz",
   "version": "0.0.1",
   "scripts": {
     "test": "jest"
