@@ -1,4 +1,10 @@
-const { fizzbuzz, toFizzbuzz } = require("./fizzbuzz");
+const {
+  fizzbuzz,
+  isFizz,
+  isBuzz,
+  isFizzbuzz,
+  toFizzbuzz,
+} = require("./fizzbuzz");
 
 test("fizzbuzz - returns an array representing the fizzbuzz sequence up to that number", () => {
   expect(fizzbuzz(1)).toEqual([1]);
@@ -21,6 +27,39 @@ test("fizzbuzz - returns an array representing the fizzbuzz sequence up to that 
     14,
     "FizzBuzz",
   ]);
+});
+
+test("isFizz - returns true if and only if the number is a multiple of three", () => {
+  expect(isFizz(3)).toBe(true);
+  expect(isFizz(4)).toBe(false);
+  expect(isFizz(5)).toBe(false);
+  expect(isFizz(6)).toBe(true);
+  expect(isFizz(7)).toBe(false);
+  expect(isFizz(8)).toBe(false);
+  expect(isFizz(9)).toBe(true);
+  expect(isFizz(10)).toBe(false);
+});
+
+test("isBuzz - returns true if and only if the number is a multiple of three", () => {
+  expect(isBuzz(3)).toBe(false);
+  expect(isBuzz(4)).toBe(false);
+  expect(isBuzz(5)).toBe(true);
+  expect(isBuzz(6)).toBe(false);
+  expect(isBuzz(7)).toBe(false);
+  expect(isBuzz(8)).toBe(false);
+  expect(isBuzz(9)).toBe(false);
+  expect(isBuzz(10)).toBe(true);
+});
+
+test("isFizzbuzz - returns true if and only if the number is a multiple of fifteen", () => {
+  expect(isFizzbuzz(3)).toBe(false);
+  expect(isFizzbuzz(5)).toBe(false);
+  expect(isFizzbuzz(8)).toBe(false);
+  expect(isFizzbuzz(9)).toBe(false);
+  expect(isFizzbuzz(10)).toBe(false);
+  expect(isFizzbuzz(15)).toBe(true);
+  expect(isFizzbuzz(30)).toBe(true);
+  expect(isFizzbuzz(45)).toBe(true);
 });
 
 test('toFizzbuzz - converts multiples of fifteen to "FizzBuzz"', () => {
