@@ -33,6 +33,11 @@ function toFizzbuzz(n) {
   }
 }
 
+/* Ignore the commented-out code below until Exercise 3 */
+// let isBuzz = (n) => {
+//   return n % 5 === 0;
+// }
+
 // Export the functions so that they can be used in ./fizzbuzz.test.js
 module.exports = {
   fizzbuzz,

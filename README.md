@@ -30,7 +30,7 @@ This project is all about setting up your machine for JavaScript programmes, usi
 - Write an `if`/`else` statement in JavaScript
 - Write a `for` loop in JavaScript
 
-## Exercise -1: Preparing to run JavaScript projects on your machine
+## Exercise 0: Preparing to run JavaScript projects on your machine
 
 > 🎯 **Success criterion:** you can verify that you have `nvm` and `yarn` installed, and you can open up a JavaScript console in the terminal with `node`
 
@@ -81,7 +81,7 @@ Because `yarn` isn't bundled with `node` by default, we'll have to install it...
 
 Look at [the Yarn docs on installation here](https://classic.yarnpkg.com/en/docs/install/), and follow the docs to verify that you have successfully installed it.
 
-## Exercise 0: Installing and running your first JavaScript project
+## Exercise 1: Installing and running your first JavaScript project
 
 > 🎯 **Success criterion:** you are able to run the tests for this project locally and see the output in your terminal (hopefully all passing tests!).
 
@@ -177,114 +177,64 @@ We won't often be adding to our `scripts`, but it's helpful to understand what's
 
 Finally, let's revert to `"test": "jest"` as we had before, and confirm that this work with another `yarn test`.
 
-## Exercise 1: Reading, understanding and documenting
+## Exercise 2: Documenting differences between Python and JavaScript syntax
 
-> 🎯 **Success criterion:** a document which outlines your understanding so far of how this JavaScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
+> 🎯 **Success criterion:** a document which outlines the similarities and differences between a Python and JavaScript Fizzbuzz solution.
 
-(N.B.: The _correctness_ of your theory is **much less important** than the _process_ of forming this document. [Forming a prediction, and then discovering it was wrong, is an effective way to learn](https://www.sciencedirect.com/science/article/abs/pii/S0959475217303468)!)
+We think that you will be able to work out lots about JavaScript just by bringing in your existing ideas from Python and looking at the implementation of Fizzbuzz in `fizzbuzz.js`.
 
-We think that you will be able to work out lots about JavaScript just by bringing in your existing ideas from Python, although you might want to look at some of the following readings for specific things:
+Here are some things in particular which you could pay attention to in comparing JavaScript and Python:
+
+- How are code comments left?
+- How are functions defined?
+- How are variables declared and assigned values?
+- How are values compared?
+- How are `for` loops written?
+- How are `if`/`else` statements written?
+
+The following readings may help you:
 
 - [JavaScript variables](https://javascript.info/variables)
 - [JavaScript `for` loops](https://www.programiz.com/javascript/for-loop)
+- [JavaScript if else and else if](https://www.w3schools.com/js/js_if_else.asp)
+- [JavaScript function basics](https://javascript.info/function-basics)
+- [JavaScript - Double Equals vs. Triple Equals](https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a)
+- [JavaScript Comparison and Logical Operators](https://www.w3schools.com/js/js_comparisons.asp)
 
-As a _learning exercise_ in reading and thinking about code, here are some steps that we _suggest_ (not as a strict sequential ordering):
+### Checking your understanding
 
-### a) Take some time to read and digest the code.
+A great way to check your understanding is to:
 
-Focus on forming a theory about how the programme is meant to work, through the lens of _ideas_ rather than the _syntax_.
+1. Change something in the code
+2. Predict whether the tests will continue to pass/fail
+3. Run the tests (`yarn test`)
+4. Check whether your prediction was correct/incorrect
 
-You won't understand everything straight away. That's okay! It is a different syntax to Python. However, the _ideas_ are very similar.
+For example, here are the things worth investigating:
 
-### b) Add comments for the parts you understand.
+- What happens if you change a `===` to a `==`?
+- What happens if you change the order of the `if`/`else` branches in `toFizzbuzz`?
+- What happens if you remove the `return` keyword from this function?
 
-At this point in time, you're trying to make sense of the code, and hold a lot of things together in your head.
+## Exercise 3: Arrow functions
 
-It will help your learning to take some of those things out of your head and put them down in writing, so we suggest that you begin documenting your understanding of the code by adding comments that explain what is happening.
-
-For example, here is how you might try to document your understanding of a line of code within a function:
+There's a section of code which is currently commented out:
 
 ```js
-function printGreeting(name) {
-  /**
-   * I think console.log is printing
-   *  out the message we pass to it.
-   *  This message comes from joining
-   *  together three parts into a single
-   *  combined message.
-   */
-  console.log("Hi there, " + name + "!");
-}
+// let isBuzz = (n) => {
+//   return n % 5 === 0
+// }
 ```
 
-... but you have the freedom to document in whatever way seems helpful or sensible to you.
+This is using an alternative function syntax in JavaScript, called arrow functions.
 
-(Unsure of the syntax for adding comments in JavaScript? Google it!)
+If you de-comment it (select all the lines, then press `Cmd + /` on MacOS or `Ctrl + /` otherwise):
 
-_(N.B. This documenting exercise is suggested as a learning tool rather than a production codebase best practice.)_
-
-### c) Google things you don't understand.
-
-We expect that there are things in the code which you won't immediately fathom (e.g. `Object.values).
-
-Google them and see if you can make sense of them!
-
-### d) Experiment with changing things.
-
-A great way to test your understanding of things is to experiment, change things, and see what breaks.
-
-Things you might try doing:
-
-- You have a theory about a variable - try doing a `console.log` of it to get some _visibility_ on its value
-- You have a theory about the flow of a function - try moving things around inside it and see whether it breaks as you expect
-
-## Exercise 2: JavaScript-specific notes
-
-> 🎯 **Success criterion:** a document which outlines how this Hangman game uses some TypeScript features that don't exist in JavaScript.
-
-The basic principles of variable assignment, control flow and functions are the same between TypeScript and JavaScript (and also Python).
-
-TypeScript does introduce some additional things, though:
-
-| Item | JavaScript example | TypeScript example |
-| --- | --- | --- |
-| Variable declaration | <pre>let counter = 10</pre> | <pre>let counter: number = 10</pre> |
-| Function declaration | <pre>function printCounterValue() { <br /> &nbsp;console.log(counter); <br /> }</pre> | <pre>function printCounterValue(): void { <br /> &nbsp;console.log(counter); <br />}</pre> |
-| Parameter declaration | <pre>function incrementCounter(n) { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> | <pre>function incrementCounter(n: number): number { <br /> &nbsp;counter += n; <br /> &nbsp;return counter; <br /> }</pre> |
-| Interfaces | N/A | <pre>interface FootballMatch { <br/>&nbsp;homeGoals: number; <br/>&nbsp;awayGoals: number; <br/>&nbsp;teamNames: string[]; <br/>&nbsp;isFullTime: boolean; <br/>}</pre> |
-| Types | N/A | <pre>type FootballPosition = 'striker' <br/>&nbsp;&#124; 'midfielder' <br/>&nbsp;&#124; 'defender' <br/>&nbsp;&#124; 'goalkeeper'</pre> |
-| Type Assertion | N/A | <pre>const substituteBench = [<br/>&nbsp;'goalkeeper', <br/>&nbsp;'defender', <br/>&nbsp;'defender', <br/>&nbsp;'midfielder', <br/>&nbsp;'midfielder', <br/>&nbsp;'striker' <br/>] as FootballPosition[]</pre> |
-
-Produce a document which explains:
-
-- How do each of these things work?
-- How are they used in the Hangman project?
-
-If you are a bit baffled by TypeScript, you might want to [try this 1 hour course](https://scrimba.com/learn/intrototypescript).
-
-## Exercise 4: Check your understanding
-
-> 🎯 **Success criterion:** a conversation with a Faculty member and amended comments.
-
-Talk to a member of Faculty about your understanding of the game and of TypeScript.
-
-Amend your notes for any important points that come out of the conversation.
-
-## Exercise 5: Extend the game
-
-> 🎯 **Success criterion:** a game which can be play-tested and which satisfies the specified requirements for each extension.
-
-### Extension 1: Handle uppercase guesses
-
-Try guessing an uppercase letter, an uppercase word or a word with a mixture of cases in it - the game probably doesn't behave how players would expect.
-
-Produce some acceptance criteria for a fix, and then try to implement a fix to pass those acceptance criteria.
-
-(Acceptance criteria are really helpful here because there are at least two fundamentally different ways you could handle the user inputting a guess in uppercase (or in a mixture of upper and lowercase): require them to try again with only lowercase, or process the uppercase in a sensible way.)
-
-### Extension 2: Hangman animation
-
-The game currently prints out a slightly boring 'Lives remaining' message. Extend the game to print unicode symbols such as hearts or stars indicating the number of lives remaining. As an example, a singular snowflake (❄) could be logged via `console.log("\u2744")`.
+```js
+let isBuzz = (n) => {
+  return n % 5 === 0;
+};
+```
 
 ## Exercise 6: Commentary and reflection
 
