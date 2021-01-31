@@ -1,4 +1,11 @@
-function fizzbuzz(sequenceStop) {}
+function fizzbuzz(endNumber) {
+  const sequence = [];
+  for (let n = 1; n <= endNumber; n++) {
+    const nextFizzbuzzEntry = toFizzbuzz(n);
+    sequence.push(nextFizzbuzzEntry);
+  }
+  return sequence;
+}
 
 function isFizz(n) {
   return n % 3 === 0;
