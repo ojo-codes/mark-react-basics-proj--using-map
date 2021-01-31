@@ -169,13 +169,13 @@ Now, try replacing `"test"` with `"pick-avocados"` (a deliberately silly name ch
 
 When you try to run `yarn test`, you'll see that it'll tell you that it can't find the command - but `yarn pick-avocados` will execute the `pwd` command and print your working directory.
 
-We won't often be adding to our `scripts`, but it's helpful to understand what's going on when we run a command like `yarn test` - it's all specified for us in our `package.json`.
+We won't often be adding to our `scripts`, but it's helpful to understand what's going on when we run a command like `yarn test` - it does what we specified in our `package.json`.
 
 Finally, let's revert to `"test": "jest"` as we had before, and confirm that this work with another `yarn test`.
 
 ## Exercise 1: Reading, understanding and documenting
 
-**Success criterion:** a document which outlines how you think this JavaScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
+> 🎯 **Success criterion:** a document which outlines your understanding so far of how this JavaScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
 
 (N.B.: The _correctness_ of your theory is **much less important** than the _process_ of forming this document. [Forming a prediction, and then discovering it was wrong, is an effective way to learn](https://www.sciencedirect.com/science/article/abs/pii/S0959475217303468)!)
 
