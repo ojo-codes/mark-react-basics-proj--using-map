@@ -216,7 +216,7 @@ For example, here are the things worth investigating:
 - What happens if you change the order of the `if`/`else` branches in `toFizzbuzz`?
 - What happens if you remove the `return` keyword from this function?
 
-## Exercise 3: Arrow functions
+## Exercise 3: Arrow functions (block body / explicit return)
 
 There's a section of code which is currently commented out:
 
@@ -226,15 +226,17 @@ There's a section of code which is currently commented out:
 // }
 ```
 
-This is using an alternative function syntax in JavaScript, called arrow functions.
+This is using an alternative function syntax in JavaScript, called arrow functions (here, with a block body and explicit return - we'll look at a different arrow function syntax soon).
 
-If you de-comment it (select all the lines, then press `Cmd + /` on MacOS or `Ctrl + /` otherwise):
+Let's comment-out the whole `function isBuzz() { ... }` and de-comment out this block body `isBuzz` function:
 
 ```js
 let isBuzz = (n) => {
   return n % 5 === 0;
 };
 ```
+
+Now run the tests - you should find that they still pass.
 
 ## Exercise 6: Commentary and reflection
 
