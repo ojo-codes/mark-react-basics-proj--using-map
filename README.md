@@ -25,6 +25,10 @@ This project is all about setting up your machine for JavaScript programmes, usi
 - Install `npm` dependencies with `yarn`
 - Run a script with `yarn`
 - Write tests in JavaScript with Jest
+- Declare a variable in JavaScript with `let`
+- Write a function with a function expression in JavaScript
+- Write an `if`/`else` statement in JavaScript
+- Write a `for` loop in JavaScript
 
 ## Exercise -1: Preparing to run JavaScript projects on your machine
 
@@ -91,14 +95,14 @@ Let's clone the repository:
 
 ```bash
 cd ~/Developer/Academy # or wherever you're storing Academy repos
-git clone https://github.com/WeAreAcademy/mark-fundamentals-proj--js-xmas-tree.git
+git clone https://github.com/WeAreAcademy/mark-fundamentals-proj--js-fizzbuzz.git
 ```
 
 and now note a few files:
 
 - `yarn.lock` - let's ignore this for now
-- `xmas-tree.js` - this has our main code
-- `xmas-tree.spec.js` - this has our tests
+- `fizzbuzz.js` - this has our main code
+- `fizzbuzz.spec.js` - this has our tests
 - `package.json` - let's look at this now!
 
 ### Reading `package.json`
