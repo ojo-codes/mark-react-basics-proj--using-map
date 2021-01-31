@@ -218,6 +218,8 @@ For example, here are the things worth investigating:
 
 ## Exercise 3: Arrow functions (block body / explicit return)
 
+> 🎯 **Success criterion:** all the functinos in `fizzbuzz.js` are rewritten into arrow function (block body) style, with the tests still passing.
+
 There's a section of code which is currently commented out:
 
 ```js
@@ -226,7 +228,7 @@ There's a section of code which is currently commented out:
 // }
 ```
 
-This is using an alternative function syntax in JavaScript, called arrow functions (here, with a block body and explicit return - we'll look at a different arrow function syntax soon).
+This is using an alternative function syntax in JavaScript, called 'arrow functions' (here, with a block body and explicit return - we'll look at a different arrow function syntax soon).
 
 Let's comment-out the whole `function isBuzz() { ... }` and de-comment out this block body `isBuzz` function:
 
@@ -237,6 +239,10 @@ let isBuzz = (n) => {
 ```
 
 Now run the tests - you should find that they still pass.
+
+Arrow functions are an alternative way of declaring functions in JavaScript. (They don't behave in _precisely_ the same way as the traditional function expression used in previous exercises, but those niggling differences aren't going to be important to know for a while yet - so, for now, you can treat them as equivalent.)
+
+The advantages of arrow functions will become clearer later (we'll see one advantage in the next exercise!) - but, for now, see if you can rewrite all the current `function` expressions into arrow function syntax.
 
 ## Exercise 6: Commentary and reflection
 
