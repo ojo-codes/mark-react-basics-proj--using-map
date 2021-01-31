@@ -1,48 +1,42 @@
-const {
-  xmasTree,
-  findLineWidth,
-  makeFoliageSegment,
-  makeTreeFoliage,
-  makeTreeTrunk,
-} = require("./xmas-tree");
+const { fizzbuzz, toFizzbuzz } = require("./fizzbuzz");
 
-test("xmasTree returns an array modelling a Christmas tree of given foliage height", () => {
-  expect(xmasTree(5)).toEqual([
-    "____#____",
-    "___###___",
-    "__#####__",
-    "_#######_",
-    "#########",
-    "____#____",
-    "____#____",
+test("fizzbuzz - returns an array representing the fizzbuzz sequence up to that number", () => {
+  expect(fizzbuzz(1)).toEqual([1]);
+  expect(fizzbuzz(3)).toEqual([1, 2, "Fizz"]);
+  expect(fizzbuzz(5)).toEqual([1, 2, "Fizz", 4, "Buzz"]);
+  expect(fizzbuzz(15)).toEqual([
+    1,
+    2,
+    "Fizz",
+    4,
+    "Buzz",
+    "Fizz",
+    7,
+    8,
+    "Fizz",
+    "Buzz",
+    11,
+    "Fizz",
+    13,
+    14,
+    "FizzBuzz",
   ]);
-  expect(xmasTree(3)).toEqual(["__#__", "_###_", "#####", "__#__", "__#__"]);
 });
 
-test("findLineWidth finds the line width from a foliage height", () => {
-  expect(findLineWidth(5)).toBe(9);
-  expect(findLineWidth(3)).toBe(5);
+test('toFizzbuzz - converts multiples of fifteen to "FizzBuzz"', () => {
+  expect(toFizzbuzz(15)).toBe("FizzBuzz");
+  expect(toFizzbuzz(30)).toBe("FizzBuzz");
+  expect(toFizzbuzz(153015)).toBe("FizzBuzz");
 });
 
-test("makeFoliageSegment returns the foliage segment for a given level of a tree of given foliage height", () => {
-  expect(makeFoliageSegment(5, 1)).toBe("____#____");
-  expect(makeFoliageSegment(5, 4)).toBe("_#######_");
-  expect(makeFoliageSegment(3, 1)).toBe("__#__");
-  expect(makeFoliageSegment(3, 2)).toBe("_###_");
+test('toFizzbuzz - converts multiples of three to "Fizz"', () => {
+  expect(toFizzbuzz(3)).toBe("Fizz");
+  expect(toFizzbuzz(9)).toBe("Fizz");
+  expect(toFizzbuzz(30000)).toBe("Fizz");
 });
 
-test("makeTreeFoliage returns the foliage for a tree of given foliage height", () => {
-  expect(makeTreeFoliage(5)).toEqual([
-    "____#____",
-    "___###___",
-    "__#####__",
-    "_#######_",
-    "#########",
-  ]);
-  expect(makeTreeFoliage(3)).toEqual(["__#__", "_###_", "#####"]);
-});
-
-test("makeTreeTrunk returns the tree trunk part of the Christmas tree with given foliage height", () => {
-  expect(makeTreeTrunk(5)).toEqual(["____#____", "____#____"]);
-  expect(makeTreeTrunk(3)).toEqual(["__#__", "__#__"]);
+test('toFizzbuzz - converts multiples of five to "Buzz"', () => {
+  expect(toFizzbuzz(5)).toBe("Buzz");
+  expect(toFizzbuzz(50)).toBe("Buzz");
+  expect(toFizzbuzz(50005)).toBe("Buzz");
 });
