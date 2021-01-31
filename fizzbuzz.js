@@ -1,7 +1,9 @@
 function fizzbuzz(endNumber) {
-  const sequence = [];
+  // Note: an array map would be preferred here, but we'll look at maps later
+  //  (although you could investigate JS array maps yourself)
+  let sequence = [];
   for (let n = 1; n <= endNumber; n++) {
-    const nextFizzbuzzEntry = toFizzbuzz(n);
+    let nextFizzbuzzEntry = toFizzbuzz(n);
     sequence.push(nextFizzbuzzEntry);
   }
   return sequence;
