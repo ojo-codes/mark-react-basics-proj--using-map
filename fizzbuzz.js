@@ -12,7 +12,17 @@ function isFizzbuzz(n) {
   return isFizz(n) && isBuzz(n);
 }
 
-function toFizzbuzz(n) {}
+function toFizzbuzz(n) {
+  if (isFizzbuzz(n)) {
+    return "FizzBuzz";
+  } else if (isFizz(n)) {
+    return "Fizz";
+  } else if (isBuzz(n)) {
+    return "Buzz";
+  } else {
+    return n;
+  }
+}
 
 // Export the functions so that they can be used in ./fizzbuzz.test.js
 module.exports = {
