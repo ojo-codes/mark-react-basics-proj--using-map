@@ -71,11 +71,17 @@ test('toFizzbuzz - converts multiples of fifteen to "FizzBuzz"', () => {
 test('toFizzbuzz - converts multiples of three to "Fizz"', () => {
   expect(toFizzbuzz(3)).toBe("Fizz");
   expect(toFizzbuzz(9)).toBe("Fizz");
-  expect(toFizzbuzz(30000)).toBe("Fizz");
+  expect(toFizzbuzz(30003)).toBe("Fizz");
 });
 
 test('toFizzbuzz - converts multiples of five to "Buzz"', () => {
   expect(toFizzbuzz(5)).toBe("Buzz");
   expect(toFizzbuzz(50)).toBe("Buzz");
   expect(toFizzbuzz(50005)).toBe("Buzz");
+});
+
+test("toFizzbuzz - returns the number if it isn't a multiple or 3 or 5", () => {
+  expect(toFizzbuzz(1)).toBe(1);
+  expect(toFizzbuzz(4)).toBe(4);
+  expect(toFizzbuzz(98)).toBe(98);
 });
