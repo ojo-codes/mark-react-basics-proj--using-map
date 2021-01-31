@@ -212,13 +212,15 @@ A great way to check your understanding is to:
 
 For example, here are the things worth investigating:
 
+- What happens if you remove the `let` keyword?
+- What happens if you change `n = n + 1` for `n++`?
 - What happens if you change a `===` to a `==`?
 - What happens if you change the order of the `if`/`else` branches in `toFizzbuzz`?
 - What happens if you remove the `return` keyword from this function?
 
 ## Exercise 3: Arrow functions (block body / explicit return)
 
-> 🎯 **Success criterion:** all the functinos in `fizzbuzz.js` are rewritten into arrow function (block body) style, with the tests still passing.
+> 🎯 **Success criterion:** all the functions in `fizzbuzz.js` are rewritten into arrow function (block body) style, with the tests still passing.
 
 There's a section of code which is currently commented out:
 
@@ -244,6 +246,50 @@ Arrow functions are an alternative way of declaring functions in JavaScript. (Th
 
 The advantages of arrow functions will become clearer later (we'll see one advantage in the next exercise!) - but, for now, see if you can rewrite all the current `function` expressions into arrow function syntax.
 
-## Exercise 6: Commentary and reflection
+## Exercise 4: Arrow functions (implicit return)
 
-**Success criterion:** documented reflections.
+> 🎯 **Success criterion:** all the relevant functions in `fizzbuzz.js` are rewritten into arrow function (implicit return) style, with the tests still passing.
+
+There's another section of code which is currently commented out:
+
+```js
+// let isBuzz = (n) => n % 5 === 0;
+```
+
+This is an arrow function syntax variant, which we might call a 'implicit return' arrow function.
+
+Let's comment-out the previous arrow function (with block body and explicit return) `isBuzz`, and de-comment this one-line arrow function for it:
+
+```js
+let isBuzz = (n) => n % 5 === 0;
+```
+
+Now run the tests - you should find that they still pass.
+
+This arrow function is a concise way of declaring short and simple functions in JavaScript, with an implicit return rather than an explicit return.
+
+(Traditional `function` expressions and block body arrow functions both require the `return` keyword explicitly to return a value.)
+
+However, only functions which are doing a direct and immediate `return` can be rewritten in this implicit return style - for example, we can't straightforwardly refactor `fizzbuzz` or `toFizzbuzz` into implicit return arrow functions.
+
+However, you should be able to **rewrite both `isFizz` and `isFizzbuzz` into implicit return arrow functions, and confirm that the tests still pass afterwards**.
+
+> 💡 It is possible to rewrite `toFizzbuzz` into an implicit return arrow function by chaining JavaScript ternaries, but we won't do this now as it's a bit of a distraction - but feel free to research how this might be done.
+
+## Exercise 5: `let` vs `const` vs `var`
+
+> 🎯 **Success criterion:** all variable assignments are rewritten to use `const` wherever possible
+
+Up until this point, we have been using `let` to declare our variables, as opposed to `const` and `var` (which can also be used to declare variables).
+
+A common opinion (which we'll adopt in future examples) is "use `const` by default to declare; use `let` if re-assignment really is necessary; don't use `var`." (`var` used to be the only way to declare variables in JavaScript, so there is a lot of legacy code which uses it exclusively, but it is extremely rare in modern JavaScript code.)
+
+Whilst this is the most common opinion, it isn't the only one. Here are some related readings:
+
+- [Let vs Const in JavaScript](https://flaviocopes.com/javascript-let-const/)
+- [var vs let vs const in JavaScript](https://ui.dev/var-let-const/)
+- [On let vs const](https://overreacted.io/on-let-vs-const/)
+
+However, we'll stick with the consensus in all future examples.
+
+**Rewrite the code to use `const` wherever possible, and ensure that the tests still pass.**

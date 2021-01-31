@@ -2,7 +2,7 @@ function fizzbuzz(endNumber) {
   // Note: an array map would be preferred here, but we'll look at maps later
   //  (although you could investigate JS array maps yourself)
   let sequence = [];
-  for (let n = 1; n <= endNumber; n++) {
+  for (let n = 1; n <= endNumber; n = n + 1 /* n++ more common */) {
     // demoing variable declaration and assignment on separate lines below
     // although it'd be more typical in this case to do a one liner
     let nextFizzbuzzEntry;
