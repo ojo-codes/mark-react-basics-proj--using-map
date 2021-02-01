@@ -154,7 +154,7 @@ These aren't direct dependencies of our root project - but, as dependencies of a
 
 This means that you will be able to find another folder, `node_modules/import-local` - which, again, has its own `package.json`, and its own dependencies, e.g. `pkg-dir`, which has its own dependencies...
 
-It's by tracing out this dependency tree that we end up with the huge massive `node_modules` folder. (This is a bit of a meme in JavaScript-land - you can use your favourite search engine and look at "node modules meme"...)
+It's by tracing out this dependency tree that we end up with the huge massive `node_modules` folder. (This is a bit of a meme in JavaScript-land - you can use your favourite search engine and look at "node modules meme"...). Due to the fact that `node_modules` is so large and can be readily installed via the `yarn` command, we do not want to include it in our git repos. Therefore, it is always listed in the gitignore file. 
 
 Now that you have installed the dependencies, you'll be able to run the following command to execute the project tests:
 
