@@ -166,9 +166,23 @@ You'll see `jest` pop up in the terminal, followed by the test output. Congratul
 
 ### Returning to `scripts` in `package.json`
 
-The reason why `jest` pops up goes back to our `scripts` in `package.json` - you'll see that we have a script called `test` which is set to `"jest"`.
+The reason why `jest` pops up goes back to our `scripts` in `package.json` - you'll see that we have a script called `test` which is set to `"jest"`:
 
-Try replacing `"jest"` with `"pwd"`, then execute `yarn test` again. You'll see that it prints your working directory.
+```json
+"scripts": {
+  "test": "jest"
+},
+```
+
+Try replacing `"jest"` with `"pwd"`...
+
+```json
+"scripts": {
+  "test": "pwd"
+},
+```
+
+... then execute `yarn test` again. You'll see that it prints your working directory.
 
 Now, try replacing `"test"` with `"pick-avocados"` (a deliberately silly name chosen for demonstration purposes).
 
