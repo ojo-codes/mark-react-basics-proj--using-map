@@ -1,3 +1,4 @@
+// using functions exported from './fizzbuzz'
 const {
   fizzbuzz,
   isFizz,
@@ -6,7 +7,7 @@ const {
   toFizzbuzz,
 } = require("./fizzbuzz");
 
-test("fizzbuzz - returns an array representing the fizzbuzz sequence up to that number", () => {
+test("fizbuzz - returns an array representing the fizzbuzz sequence up to that number", () => {
   expect(fizzbuzz(1)).toEqual([1]);
   expect(fizzbuzz(3)).toEqual([1, 2, "Fizz"]);
   expect(fizzbuzz(5)).toEqual([1, 2, "Fizz", 4, "Buzz"]);

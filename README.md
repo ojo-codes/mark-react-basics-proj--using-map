@@ -25,10 +25,11 @@ This project is all about setting up your machine for JavaScript programmes, usi
 - Install `npm` dependencies with `yarn`
 - Run a script with `yarn`
 - Write tests in JavaScript with Jest
-- Declare a variable in JavaScript with `let`
+- Declare variables in JavaScript with `let` and `const`
 - Write a function with a function expression in JavaScript
 - Write an `if`/`else` statement in JavaScript
 - Write a `for` loop in JavaScript
+- Write an arrow function in JavaScript
 
 ## Exercise 0: Preparing to run JavaScript projects on your machine
 
