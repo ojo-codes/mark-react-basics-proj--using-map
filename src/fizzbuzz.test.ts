@@ -1,4 +1,4 @@
-// using functions exported from './fizzbuzz'
+// using functions exported from './fizzbuzz.ts'
 // (standard TS importing syntax)
 import { fizzbuzz, isFizz, isBuzz, isFizzbuzz, toFizzbuzz } from "./fizzbuzz";
 

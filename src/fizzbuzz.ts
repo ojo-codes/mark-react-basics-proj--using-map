@@ -1,13 +1,7 @@
 function fizzbuzz(endNumber: number): (string | number)[] {
-  // Note: an array map would be preferred here, but we'll look at maps later
-  //  (although you could investigate JS array maps yourself)
-  let sequence = [];
-  for (let n = 1; n <= endNumber; n = n + 1 /* n++ more common */) {
-    // demoing variable declaration and assignment on separate lines below
-    // although it'd be more typical in this case to do a one liner
-    let nextFizzbuzzEntry;
-    nextFizzbuzzEntry = toFizzbuzz(n);
-    // let nextFizzbuzzEntry = toFizzbuzz(n) // <-- what we would normally do
+  const sequence = [];
+  for (let n = 1; n <= endNumber; n++) {
+    const nextFizzbuzzEntry = toFizzbuzz(n);
     sequence.push(nextFizzbuzzEntry);
   }
   return sequence;
@@ -37,14 +31,6 @@ function toFizzbuzz(n: number): number | string {
   }
 }
 
-/* Ignore the commented-out code below until Exercise 3 */
-// let isBuzz = (n: number): boolean => {
-//   return n % 5 === 0;
-// }
-
-/* Ignore the commented-out code below until Exercise 4 */
-// let isBuzz = (n: number): boolean => n % 5 === 0;
-
-// Export the functions so that they can be used in ./fizzbuzz.test.js
+// Export the functions so that they can be used in ./fizzbuzz.test.ts
 // (standard TS exporting syntax)
 export { fizzbuzz, isFizz, isBuzz, isFizzbuzz, toFizzbuzz };
