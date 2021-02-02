@@ -153,7 +153,7 @@ function randomBoolean(): boolean {
 }
 ```
 
-There's another demo to inspect at `src/examples/bool.ts`, which you can run with `yarn run:bool:ts`.
+There's another demo to inspect at `src/examples/bool.ts`, which you can run with `yarn start:bool:ts`.
 
 ### Combining the two
 
