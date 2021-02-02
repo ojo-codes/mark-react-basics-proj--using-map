@@ -106,3 +106,51 @@ You can check out this example at `src/examples/lcm.ts`, and run it with `yarn s
 **Try un-commenting the silly examples** - you'll see (in VS Code) that TypeScript errors get underlined, and that we're blocked from running `yarn start:lcm:ts` (which is saving us from silly output).
 
 We suggest you play around with the code and try to test the TypeScript compiler / error checker. (You'll notice that a single line can have multiple problems with it - both the number of arguments, as well as their types - which all need fixing before the line is permissible.)
+
+### Annotating return types
+
+Consider the below function:
+
+```js
+function getRandomBoolean() {
+  // details omitted - unimportant
+  ...
+  return randomBoolean // assume we declared and found this above
+}
+```
+
+It seems pretty clear that this function should return a (random) boolean value - either `true` or `false`.
+
+However, JavaScript lets us do something silly like the following:
+
+```js
+function randomBoolean() {
+  const randomNumber = Math.random();
+  if (randomNumber < 0.5) {
+    return false;
+  } else {
+    return "true";
+  }
+}
+```
+
+which returns the boolean `false` 50% of the time... and the _string_ `"true"` the rest of the time.
+
+There's another example you can play around with using `yarn start:bool:js` - run it a few times to see both return values.
+
+Returning the string `"true"` instead of the boolean `true` is the sort of careless mistake we would like to be able to avoid (remember the TypeScript design goal: ["Statically identify constructs that are likely to be errors."](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Design-Goals)).
+
+So, in TypeScript, we can annotate the intended return type of a function:
+
+```ts
+function randomBoolean(): boolean {
+  const randomNumber = Math.random();
+  if (randomNumber < 0.5) {
+    return false;
+  } else {
+    return "true"; // <-- TS now catches this error!
+  }
+}
+```
+
+There's another demo to inspect at `src/examples/bool.ts`, which you can run with `yarn run:bool:ts`.

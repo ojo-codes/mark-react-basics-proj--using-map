@@ -5,7 +5,8 @@
     "test": "jest",
     "build": "tsc",
     "start:lcm:js": "node src/examples/lcm.js",
-    "start:lcm:ts": "ts-node src/examples/lcm.ts"
+    "start:lcm:ts": "ts-node src/examples/lcm.ts",
+    "start:bool:js": "node src/examples/bool.js"
   },
   "license": "CC-BY-NC-ND-4.0",
   "dependencies": {},
