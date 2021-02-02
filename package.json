@@ -2,7 +2,8 @@
   "name": "mark-fundamentals-proj--js-fizzbuzz",
   "version": "0.0.1",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "license": "CC-BY-NC-ND-4.0",
   "dependencies": {},

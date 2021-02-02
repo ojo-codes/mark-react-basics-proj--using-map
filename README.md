@@ -12,24 +12,18 @@ tags:
   - wip
 ---
 
-# JS FizzBuzz
+# TS FizzBuzz
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
 
 > This is part of Academy's [technical curriculum for **The Mark**](https://github.com/WeAreAcademy/curriculum-mark). All parts of that curriculum, including this project, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-This project is all about setting up your machine for JavaScript programmes, using our previous work on FizzBuzz as inspiration.
+This project is all about comparing a TS programme to a JS programme, previous work on FizzBuzz as inspiration.
 
 ## Learning Outcomes
 
-- Install `npm` dependencies with `yarn`
-- Run a script with `yarn`
-- Write tests in JavaScript with Jest
-- Declare variables in JavaScript with `let` and `const`
-- Write a function with a function expression in JavaScript
-- Write an `if`/`else` statement in JavaScript
-- Write a `for` loop in JavaScript
-- Write an arrow function in JavaScript
+- Annotate the type of a function's parameter(s)
+- Annotate the return type of a function
 
 ## Exercise 0: Preparing to run JavaScript projects on your machine
 
@@ -154,7 +148,7 @@ These aren't direct dependencies of our root project - but, as dependencies of a
 
 This means that you will be able to find another folder, `node_modules/import-local` - which, again, has its own `package.json`, and its own dependencies, e.g. `pkg-dir`, which has its own dependencies...
 
-It's by tracing out this dependency tree that we end up with the huge massive `node_modules` folder. (This is a bit of a meme in JavaScript-land - you can use your favourite search engine and look at "node modules meme"...). Due to the fact that `node_modules` is so large and can be readily installed via the `yarn` command, we do not want to include it in our git repos. Therefore, it is always listed in the gitignore file. 
+It's by tracing out this dependency tree that we end up with the huge massive `node_modules` folder. (This is a bit of a meme in JavaScript-land - you can use your favourite search engine and look at "node modules meme"...). Due to the fact that `node_modules` is so large and can be readily installed via the `yarn` command, we do not want to include it in our git repos. Therefore, it is always listed in the gitignore file.
 
 Now that you have installed the dependencies, you'll be able to run the following command to execute the project tests:
 

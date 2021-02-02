@@ -1,4 +1,4 @@
-function fizzbuzz(endNumber) {
+function fizzbuzz(endNumber: number): (string | number)[] {
   // Note: an array map would be preferred here, but we'll look at maps later
   //  (although you could investigate JS array maps yourself)
   let sequence = [];
@@ -13,19 +13,19 @@ function fizzbuzz(endNumber) {
   return sequence;
 }
 
-function isFizz(n) {
+function isFizz(n: number): boolean {
   return n % 3 === 0;
 }
 
-function isBuzz(n) {
+function isBuzz(n: number): boolean {
   return n % 5 === 0;
 }
 
-function isFizzbuzz(n) {
+function isFizzbuzz(n: number): boolean {
   return isFizz(n) && isBuzz(n);
 }
 
-function toFizzbuzz(n) {
+function toFizzbuzz(n: number): number | string {
   if (isFizzbuzz(n)) {
     return "FizzBuzz";
   } else if (isFizz(n)) {
@@ -38,18 +38,13 @@ function toFizzbuzz(n) {
 }
 
 /* Ignore the commented-out code below until Exercise 3 */
-// let isBuzz = (n) => {
+// let isBuzz = (n: number): boolean => {
 //   return n % 5 === 0;
 // }
 
 /* Ignore the commented-out code below until Exercise 4 */
-// let isBuzz = (n) => n % 5 === 0;
+// let isBuzz = (n: number): boolean => n % 5 === 0;
 
 // Export the functions so that they can be used in ./fizzbuzz.test.js
-module.exports = {
-  fizzbuzz,
-  isFizz,
-  isBuzz,
-  isFizzbuzz,
-  toFizzbuzz,
-};
+// (standard TS exporting syntax)
+export { fizzbuzz, isFizz, isBuzz, isFizzbuzz, toFizzbuzz };
