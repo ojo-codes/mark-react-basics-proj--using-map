@@ -211,7 +211,7 @@ The immediate feedback you get from TypeScript through this process will make th
 
 > 🧠 **Make your brain work.** The _predict_ step is very important. It's how you surface and test your mental model.
 
-Here are some exmaple things you could investigate:
+Here are some example things you could investigate:
 
 - What happens if you change `toFizzbuzz`'s return type to `string` without changing the function body?
 - What happens if you try pushing a random boolean value into `sequence` array in `fizzbuzz`?
