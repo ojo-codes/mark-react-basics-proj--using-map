@@ -11,6 +11,14 @@ function isFizz(n: number): boolean {
   return n % 3 === 0;
 }
 
+// // Demonstration of how isFizz could be written as an explicit arrow function:
+// const isFizz = (n: number): boolean => {
+//   return n % 3 === 0
+// }
+
+// // Demonstration of how isFizz could be written as an implicit arrow function:
+// const isFizz = (n: number): boolean => n % 3 === 0
+
 function isBuzz(n: number): boolean {
   return n % 5 === 0;
 }
