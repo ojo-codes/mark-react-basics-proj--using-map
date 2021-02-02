@@ -154,3 +154,47 @@ function randomBoolean(): boolean {
 ```
 
 There's another demo to inspect at `src/examples/bool.ts`, which you can run with `yarn run:bool:ts`.
+
+### Combining the two
+
+Consider the following example:
+
+```ts
+function findLongestString(arrOfStrings: string[]): string {
+  // details omitted as usual
+  ...
+  return longestString;
+}
+```
+
+This says:
+
+- This function receives one argument that must be an array of strings
+- This function must return a string
+
+So TypeScript will stop you from doing the following careless mistakes:
+
+- accidentally passing in a single string rather than an array of strings
+- accidentally returning the longest string's length (i.e. a number) instead of the string itself
+
+There's an example (`src/exmaples/longest-string` in `.js` and `.ts`) for you to play around with and experiment with as usual.
+
+### What types can you use?
+
+We've seen a few different types in the above examples: `number`, `boolean`, `string`, `string[]` (array of strings).
+
+The TypeScript handbook has a good section on [Basic Types](https://www.typescriptlang.org/docs/handbook/basic-types.html), which you should review.
+
+The important ones are: Boolean, Number, String, Array, Tuple, Any, Void, Null and Undefined.
+
+These can additionally be joined with [Union types](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html), for example:
+
+- `boolean | string`: either `boolean` or `string`
+- `string | string[]`: either `string` or `string[]`
+- `(number | boolean)[]` an array which contains elements that are all either `number` or `boolean`
+
+There is much more that you can do with types - but that's enough for now...!
+
+### Interpreting TypeScript FizzBuzz
+
+If you understand all of the above, you should be able to understand the code in `src/fizzbuzz.ts`.
