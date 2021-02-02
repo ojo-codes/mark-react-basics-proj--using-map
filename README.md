@@ -177,7 +177,7 @@ So TypeScript will stop you from doing the following careless mistakes:
 - accidentally passing in a single string rather than an array of strings
 - accidentally returning the longest string's length (i.e. a number) instead of the string itself
 
-There's an example (`src/exmaples/longest-string` in `.js` and `.ts`) for you to play around with and experiment with as usual.
+There's an example (`src/examples/longest-string` in `.js` and `.ts`) for you to play around with and experiment with as usual.
 
 ### What types can you use?
 
