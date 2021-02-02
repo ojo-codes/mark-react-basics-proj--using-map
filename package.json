@@ -1,5 +1,5 @@
 {
-  "name": "mark-fundamentals-proj--js-fizzbuzz",
+  "name": "mark-fundamentals-proj--ts-fizzbuzz",
   "version": "0.0.1",
   "scripts": {
     "test": "jest",
