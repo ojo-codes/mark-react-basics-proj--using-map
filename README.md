@@ -198,3 +198,21 @@ There is much more that you can do with types - but that's enough for now...!
 ### Interpreting TypeScript FizzBuzz
 
 If you understand all of the above, you should be able to understand the code in `src/fizzbuzz.ts`.
+
+We strongly suggest that you spend some significant time doing the following:
+
+- **plan** a change to the code
+- **predict** would happen if you made that change
+- **change** the code
+- **observe** the result
+- **update** your mental model based on the result
+
+The immediate feedback you get from TypeScript through this process will make this a relatively quick way of building up your understanding of (basic) TypeScript.
+
+> 🧠 **Make your brain work.** The _predict_ step is very important. It's how you surface and test your mental model.
+
+Here are some exmaple things you could investigate:
+
+- What happens if you change `toFizzbuzz`'s return type to `string` without changing the function body?
+- What happens if you try pushing a random boolean value into `sequence` array in `fizzbuzz`?
+- What happens if you remove the `return` statement from `isFizzbuzz`?
