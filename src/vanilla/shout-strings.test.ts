@@ -16,4 +16,18 @@ test("shoutStrings - takes an array of lowercase strings, and capitalises each o
     "I'M LEARNING ABOUT MAP!!!",
     "AND I LOVE IT!!!!",
   ]);
+
+  expect(
+    shoutStrings([
+      "roses are red",
+      "violets are blue",
+      "this poem is in caps",
+      "and has exclamation marks too",
+    ])
+  ).toStrictEqual([
+    "ROSES ARE RED!!!",
+    "VIOLETS ARE BLUE!!!",
+    "THIS POEM IS IN CAPS!!!",
+    "AND HAS EXCLAMATION MARKS TOO!!!",
+  ]);
 });
