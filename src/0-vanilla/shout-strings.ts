@@ -1,8 +1,8 @@
-function shoutString(str: string) {
+function shoutString(str: string): string {
   return `${str.toUpperCase()}!!!`;
 }
 
-function shoutStrings(strings: string[]) {
+function shoutStrings(strings: string[]): string[] {
   return strings.map(shoutString);
 }
 
