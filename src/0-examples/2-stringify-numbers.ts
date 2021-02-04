@@ -9,4 +9,9 @@ function stringifyNumber(numOrString: string | number): string {
 // const stringifyNumber = (numOrString: string | number): string =>
 //   `${numOrString}`;
 
+// function stringifyNumbers(numOrStringArr: (string | number)[]): string[] {
+//   return numOrStringArr.map((numOrString: string | number) => `${numOrString}`);
+//   // return numOrStringArr.map((numOrString) => `${numOrString}`);
+// }
+
 export { stringifyNumbers, stringifyNumber };
