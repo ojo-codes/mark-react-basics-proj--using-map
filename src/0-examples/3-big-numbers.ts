@@ -6,12 +6,11 @@ function isBigNumber(n: number): boolean {
   return n >= 100;
 }
 
-// const bigNumber = (numOrString: string | number): string =>
-//   `${numOrString}`;
+// const isBigNumber = (n: number): boolean => n >= 100
 
-// function bigNumbers(numOrStringArr: (string | number)[]): string[] {
-//   return numOrStringArr.map((numOrString: string | number) => `${numOrString}`);
-//   // return numOrStringArr.map((numOrString) => `${numOrString}`);
+// function bigNumbers(numbers: number[]): boolean[] {
+//   return numbers.map((n: number) => n >= 100)
+//   // return numbers.map(n => n >= 100)
 // }
 
 export { bigNumbers, isBigNumber };
