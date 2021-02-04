@@ -1,4 +1,4 @@
-import { shoutString, shoutStrings } from "./shout-strings";
+import { shoutString, shoutStrings } from "./1-shout-strings";
 
 test("shoutString - take a single string, capitalises it and adds three exclamation marks", () => {
   expect(shoutString("hello world")).toBe("HELLO WORLD!!!");

@@ -1,4 +1,4 @@
-import { stringifyNumber, stringifyNumbers } from "./stringify-numbers";
+import { stringifyNumber, stringifyNumbers } from "./2-stringify-numbers";
 
 describe("stringifyNumber - takes the string or number representation of a number, and returns it as a string", () => {
   test("converting numbers to strings", () => {

@@ -1,4 +1,4 @@
-import { doubleNumber, doubleNumbers } from "./double-numbers";
+import { doubleNumber, doubleNumbers } from "./0-double-numbers";
 
 test("doubleNumber - takes a single number and doubles it", () => {
   expect(doubleNumber(1)).toBe(2);
