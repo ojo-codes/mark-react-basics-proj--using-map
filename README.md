@@ -52,7 +52,7 @@ Comment out the function expressions and de-comment the arrow functions - the te
 
 See if you can refactor the code in `0-exercises` to use the arrow function syntax.
 
-## Exercise 0c: Vanilla `.map` with explicitly typed anonymous arrow functions
+## Exercise 0c: Vanilla `.map` with explicitly typed anonymous arrow function callbacks
 
 > 🎯 **Success criteria:** Tests passing for all the exercises in `src/vanilla/0-exercises`, using anonymous arrow functions
 
@@ -82,7 +82,7 @@ function doubleNumbers(numbers: number[]): number[] {
 }
 ```
 
-The relevant tests should still all pass. (Instead of passing in a reference to an arrow function to `.map`, you're passing in an in-lin eanonymous arrow function.)
+The relevant tests should still all pass. (Instead of passing in a reference to an arrow function to `.map`, you're passing in an in-line anonymous arrow function.)
 
 See if you can refactor the code in `0-exercises` to use this in-line arrow function expression syntax.
 
