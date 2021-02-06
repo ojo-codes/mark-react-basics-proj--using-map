@@ -86,10 +86,46 @@ The relevant tests should still all pass. (Instead of passing in a reference to 
 
 See if you can refactor the code in `0-exercises` to use this in-line arrow function expression syntax.
 
-1. Read through `0-examples`
-2. Complete `0-exercises` with function expressions passed in
-3. Refactor `0-exercises` with arrow functions passed in
-4. Refactor `0-exercises` with inline anonymous arrow functions
-5. Refactor `0-exercises` with callbacks with type inferred
+## Exercise 0d: Vanilla `.map` with implicitly typed anonymous arrow function callbacks
 
-then more, WIP.
+> 🎯 **Success criteria:** Tests passing for all the exercises in `src/vanilla/0-exercises`, using anonymous arrow functions
+
+Currently, the examples in `src/vanilla/0-exercises` are using solutions like this:
+
+```ts
+function doubleNumbers(numbers: number[]): number[] {
+  return numbers.map((n: number) => n * 2);
+  // return numbers.map((n) => n * 2)
+}
+```
+
+Comment out the first return and de-comment the first return.
+
+```ts
+function doubleNumbers(numbers: number[]): number[] {
+  // return numbers.map((n: number) => n * 2);
+  return numbers.map((n) => n * 2);
+}
+```
+
+The relevant tests should all still pass - and _TypeScript won't complain_.
+
+On strict mode, TypeScript _won't_ let us define the below function (try it):
+
+```ts
+const doubleNumber = (n) => n * 2;
+```
+
+but it happily accepts the anonymous arrow function `(n) => n * 2` inside `numbers.map`.
+
+Why?
+
+Hover over the `n` in VS Code, and you will see that TypeScript has typed `n` as `number`.
+
+Essentially, this is because we've typed the `numbers` parameter as `number[]` - and, when we call `.map` on a `number[]`, TypeScript knows that we're iterating over `number`s, and so the anonymous callback function's first argument _has_ to be a `number`.
+
+(In the `shout-strings` example, if you do the equivalent exploration, you'll see that TypeScript can infer that an anonymous arrow function passed to `.map` on a `string[]` has a `string` as its first argument.)
+
+If you make the relevant changes to all the examples, the associated tests should all still pass.
+
+See if you can refactor the code in `0-exercises` to use this in-line arrow function expression syntax with inferred typing.
