@@ -3,8 +3,6 @@ interface AnimalSound {
   sound: string;
 }
 
-function animalSounds(arr: AnimalSound[]): string[] {
+export function animalSounds(arr: AnimalSound[]): string[] {
   return arr.map((element) => `A ${element.animal} goes: "${element.sound}!"`);
 }
-
-export { animalSounds };

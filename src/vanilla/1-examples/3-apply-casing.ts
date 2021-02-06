@@ -1,9 +1,9 @@
-interface IStringCasing {
+export interface IStringCasing {
   string: string;
   casing: "upper" | "lower" | "preserve";
 }
 
-function applyCasing(casings: IStringCasing[]): string[] {
+export function applyCasing(casings: IStringCasing[]): string[] {
   return casings.map((stringCasing) => {
     if (stringCasing.casing === "upper") {
       return stringCasing.string.toUpperCase();
@@ -14,5 +14,3 @@ function applyCasing(casings: IStringCasing[]): string[] {
     }
   });
 }
-
-export { applyCasing, IStringCasing };
