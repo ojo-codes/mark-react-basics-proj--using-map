@@ -129,3 +129,11 @@ Essentially, this is because we've typed the `numbers` parameter as `number[]` -
 If you make the relevant changes to all the examples, the associated tests should all still pass.
 
 See if you can refactor the code in `0-exercises` to use this in-line arrow function expression syntax with inferred typing.
+
+## Exercise 1: Vanilla `.map`, transforming arrays of objects
+
+> 🎯 **Success criteria:** Tests passing for all the exercises in `src/vanilla/1-exercises`, using anonymous arrow functions
+
+The examples in `src/vanilla/1-examples` transform arrays of objects to other formats.
+
+There are, again, exercises in `src/vanilla/1-exercises` for you to attempt.
