@@ -1,4 +1,4 @@
-import { pickInitials } from "./1-pick-initials";
+import { pickInitials } from "./2-pick-initials";
 
 describe("pickInitials - takes an array of objects and returns an array of strings representing initials", () => {
   test("array of objects that all have firstName and lastName", () => {

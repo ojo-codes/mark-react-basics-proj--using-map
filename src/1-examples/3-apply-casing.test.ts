@@ -1,4 +1,4 @@
-import { applyCasing, IStringCasing } from "./2-apply-casing";
+import { applyCasing, IStringCasing } from "./3-apply-casing";
 
 describe("applyCasing - maps array of objects to strings with specified casing", () => {
   test("casing: lower", () => {
