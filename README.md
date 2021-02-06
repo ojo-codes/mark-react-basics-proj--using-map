@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Map exercises
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
 
-## Available Scripts
+> This is part of Academy's [technical curriculum for **The Mark**](https://github.com/WeAreAcademy/curriculum-mark). All parts of that curriculum, including this project, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-In the project directory, you can run:
+This project is all about comparing a TS programme to a JS programme, using [previous work on FizzBuzz in JavaScript as inspiration](https://github.com/WeAreAcademy/mark-fundamentals-proj--js-fizzbuzz).
 
-### `yarn start`
+## Learning Outcomes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Pass a function expression into map
+- Pass an arrow function into map
+- Pass an anonymous arrow function into map
+- Use map of signature `T[] -> T[]`, e.g. `string[] -> string[]`
+- Use map of signature `T[] -> U[]`, e.g. `string[] -> number[]`
+- Use map to transform objects
+- Use map to return JSX
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Exercise 0a: Vanilla `.map` with function expressions
 
-### `yarn test`
+> 🎯 **Success criteria:** Tests passing for all the exercises in `src/vanilla/0-exercises`, using helper function expressions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The folder `src/vanilla/0-examples` has a few examples of `.map` (both tests and passing code, which you should review together).
 
-### `yarn build`
+MDN also has good [examples of the `.map` method on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#examples).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use these to help you to write the code needed to pass the tests in `src/vanilla/0-exercises`, _in the same style as the examples_, i.e.:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Defining a separate helper function using a function expression
+2. Passing that function expression to the array's `.map` method
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can use [Jest's options](https://jestjs.io/docs/en/cli) to [pass through a matcher/'regex'](https://jestjs.io/docs/en/cli#jest-regexfortestfiles) for specific files/folders of tests, for example:
 
-### `yarn eject`
+- `yarn test double-numbers` will run all tests that match the `double-numbers` path (i.e. `src/vanilla/0-examples/0-double-numbers.test.ts`)
+- `yarn test 0-exercises` will run all tests that match the `1-exercises` path (i.e. all `.test.ts` files which have the `src/vanilla/0-exercises` directory in their path)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Exercise 0b: Vanilla `.map` with separate arrow functions
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> 🎯 **Success criteria:** Tests passing for all the exercises in `src/vanilla/0-exercises`, using helper arrow functions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The examples in `src/vanilla/0-examples` have some commented out code with some arrow function equivalents to the function expressions:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```ts
+function doubleNumber(n: number): number {
+  return n * 2;
+}
 
-## Learn More
+// const doubleNumber = (n: number): number => n * 2;
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Comment out the function expressions and de-comment the arrow functions - the tests with `yarn test 0-examples` should all still pass.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+See if you can refactor the code in `0-exercises` to use the arrow function syntax.
+
+1. Read through `0-examples`
+2. Complete `0-exercises` with function expressions passed in
+3. Refactor `0-exercises` with arrow functions passed in
+4. Refactor `0-exercises` with inline anonymous arrow functions
+5. Refactor `0-exercises` with callbacks with type inferred
+
+then more, WIP.
