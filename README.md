@@ -14,7 +14,7 @@ This project is all about comparing a TS programme to a JS programme, using [pre
 - Use map of signature `T[] -> T[]`, e.g. `string[] -> string[]`
 - Use map of signature `T[] -> U[]`, e.g. `string[] -> number[]`
 - Use map to transform objects
-- Use map to return JSX
+- Use map to return JSX (`T[] -> JSX.Element[]`)
 
 ## Exercise 0a: Vanilla `.map` with function expressions
 
@@ -137,3 +137,11 @@ See if you can refactor the code in `0-exercises` to use this in-line arrow func
 The examples in `src/vanilla/1-examples` transform arrays of objects to other formats.
 
 There are, again, exercises in `src/vanilla/1-exercises` for you to attempt.
+
+## Exercise 2: `.map` in React
+
+> 🎯 **Success criteria:** You can explain how to use `.map` in a React app
+
+`src/react` has an example of using `.map` in React.
+
+Try playing around with the code - see if you can break it, see if you can produce your own examples - to build your understanding of how `.map` can be useful in the context of React.
