@@ -48,9 +48,43 @@ function doubleNumber(n: number): number {
 // const doubleNumber = (n: number): number => n * 2;
 ```
 
-Comment out the function expressions and de-comment the arrow functions - the tests with `yarn test 0-examples` should all still pass.
+Comment out the function expressions and de-comment the arrow functions - the tests with `yarn test 0-examples` should all still pass. (Instead of passing in a function expression, they're passing in an arrow function.)
 
 See if you can refactor the code in `0-exercises` to use the arrow function syntax.
+
+## Exercise 0c: Vanilla `.map` with explicitly typed anonymous arrow functions
+
+> 🎯 **Success criteria:** Tests passing for all the exercises in `src/vanilla/0-exercises`, using anonymous arrow functions
+
+The examples in `src/vanilla/0-examples` have some commented out code which uses in-line arrow functions:
+
+```ts
+function doubleNumbers(numbers: number[]): number[] {
+  return numbers.map(doubleNumber);
+}
+
+...
+
+// function doubleNumbers(numbers: number[]): number[] {
+//   return numbers.map((n: number) => n * 2);
+//   // return numbers.map((n) => n * 2)
+// }
+```
+
+Comment out the first function expressions and de-comment the latter ones.
+
+There _should_ still be one line still commented out - when you de-comment the function expression above, you should get the following:
+
+```ts
+function doubleNumbers(numbers: number[]): number[] {
+  return numbers.map((n: number) => n * 2);
+  // return numbers.map((n) => n * 2)
+}
+```
+
+The relevant tests should still all pass. (Instead of passing in a reference to an arrow function to `.map`, you're passing in an in-lin eanonymous arrow function.)
+
+See if you can refactor the code in `0-exercises` to use this in-line arrow function expression syntax.
 
 1. Read through `0-examples`
 2. Complete `0-exercises` with function expressions passed in
