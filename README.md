@@ -1,41 +1,46 @@
----
-module: fundamentals
+# Getting Started with Create React App
 
-level: 0
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-methods:
-  - team
-  - pair
-  - solo
+## Available Scripts
 
-tags:
-  - wip
----
+In the project directory, you can run:
 
-# Map exercises
+### `yarn start`
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-> This is part of Academy's [technical curriculum for **The Mark**](https://github.com/WeAreAcademy/curriculum-mark). All parts of that curriculum, including this project, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-This project is all about comparing a TS programme to a JS programme, using [previous work on FizzBuzz in JavaScript as inspiration](https://github.com/WeAreAcademy/mark-fundamentals-proj--js-fizzbuzz).
+### `yarn test`
 
-## Learning Outcomes
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Pass a function expression into map
-- Pass an arrow function into map
-- Pass an anonymous arrow function into map
-- Use map of signature `T[] -> T[]`, e.g. `string[] -> string[]`
-- Use map of signature `T[] -> U[]`, e.g. `string[] -> number[]`
-- Use map to transform objects
-- Use map to return JSX
+### `yarn build`
 
-Rough exercise ordering:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Read through `0-examples`
-2. Complete `0-exercises` with function expressions passed in
-3. Refactor `0-exercises` with arrow functions passed in
-4. Refactor `0-exercises` with inline anonymous arrow functions
-5. Refactor `0-exercises` with callbacks with type inferred
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-then more, WIP.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
