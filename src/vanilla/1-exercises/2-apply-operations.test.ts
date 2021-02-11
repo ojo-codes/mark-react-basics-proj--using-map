@@ -9,7 +9,7 @@ describe("applyOperations - takes two numbers and applies a specified operation 
     expect(applyOperations(input)).toStrictEqual([12, 13]);
   });
 
-  test("operation: subtract", () => {
+  test("operation: multiply", () => {
     const input = [
       { numbers: [8, 4], operation: "multiply" },
       { numbers: [12, 1], operation: "multiply" },

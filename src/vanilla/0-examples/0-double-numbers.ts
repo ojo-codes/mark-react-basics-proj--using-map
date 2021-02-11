@@ -9,8 +9,8 @@ function doubleNumber(n: number): number {
 // const doubleNumber = (n: number): number => n * 2;
 
 // function doubleNumbers(numbers: number[]): number[] {
-//   return numbers.map((n: number) => n * 2);
-//   // return numbers.map((n) => n * 2)
+  // return numbers.map((n: number) => n * 2);
+  return numbers.map((n) => n * 2)
 // }
 
 export { doubleNumbers, doubleNumber };
