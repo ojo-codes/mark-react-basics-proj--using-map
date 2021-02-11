@@ -1,9 +1,9 @@
-function whisperStrings() {
-  // your code here
+function whisperStrings(strs: string[]): string[] {
+  return strs.map(whisperString);
 }
 
-function whisperString() {
-  // your code here
+function whisperString(str: string): string {
+  return `shh: ${str.toLowerCase()}`;
 }
 
 export { whisperStrings, whisperString };
